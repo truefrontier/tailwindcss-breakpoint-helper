@@ -1,10 +1,10 @@
 module.exports = function({ addComponents, theme }) {
   const screens = theme('screens');
   const userOptions = theme('breakpointHelper.options', {
-    selector: '.breakpoint-helper::after',
+    selector: '.breakpoint-helper',
   });
   let component = {};
-  component[`${userOptions.selector}`] = {
+  component[`${userOptions.selector}::after`] = {
     position: 'fixed',
     zIndex: '2147483647',
     left: '0',
@@ -18,10 +18,13 @@ module.exports = function({ addComponents, theme }) {
     color: '#fff',
     content: `'[none]: 0px'`,
   };
+  component[`${userOptions.selector}:hover::after`] = {
+    display: 'none',
+  };
 
   Object.entries(screens).forEach(([screen, value]) => {
     let style = {};
-    style[`${userOptions.selector}`] = {
+    style[`${userOptions.selector}::after`] = {
       content: `'${screen}: ${value}'`,
     };
     component[`@screen ${screen}`] = style;
