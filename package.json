@@ -1,0 +1,26 @@
+{
+  "name": "tailwindcss-breakpoint-helper",
+  "version": "0.0.1",
+  "description": "A Tailwind CSS component to show the currently active responsive breakpoint",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truefrontier/tailwindcss-breakpoint-helper.git"
+  },
+  "keywords": [
+    "tailwindcss",
+    "golden ratio",
+    "spacing",
+    "scale",
+    "width",
+    "borderWidth",
+    "lineHeight",
+    "plugin"
+  ],
+  "author": "Kevin Kirchner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truefrontier/tailwindcss-breakpoint-helper/issues"
+  },
+  "homepage": "https://github.com/truefrontier/tailwindcss-breakpoint-helper#readme"
+}
