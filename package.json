@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-breakpoint-helper",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A Tailwind CSS component to show the currently active responsive breakpoint",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "url": "https://github.com/truefrontier/tailwindcss-breakpoint-helper/issues"
   },
   "homepage": "https://github.com/truefrontier/tailwindcss-breakpoint-helper#readme",
-  "devDependencies": {
+  "dependencies": {
     "tailwindcss": "^1.3.4"
   }
 }
