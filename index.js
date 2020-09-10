@@ -1,9 +1,10 @@
-module.exports = function({ addComponents, theme }) {
+module.exports = function ({ addComponents, theme }) {
   const screens = theme('screens');
 
   const selector = theme('breakpointHelper.selector', '.breakpoint-helper');
   const pseudo = theme('breakpointHelper.pseudo', '::after');
   const hideOnHover = theme('breakpointHelper.hideOnHover', true);
+  const hideOnProduction = theme('breakpointHelper.hideOnProduction', true);
   const userStyles = theme('breakpointHelper.style', {});
 
   const defaultPosition = ['bottom', 'left'];
@@ -45,5 +46,5 @@ module.exports = function({ addComponents, theme }) {
     component[`@screen ${screen}`] = style;
   });
 
-  addComponents(component);
+  if (hideOnProduction && process.env.NODE_ENV !== 'production') addComponents(component);
 };
